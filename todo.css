@@ -1,7 +1,9 @@
 :root {
---clr-background: gray;
---clr-primary-dark: rgb(58, 57, 57);
---clr-primary: rgb(92, 91, 91);
+--clr-background: rgb(230, 227, 227);
+--clr-primary-dark: rgb(97, 128, 119);
+/* --clr-primary-dark: rgb(124, 123, 123); */
+--clr-primary: rgb(116, 146, 138);
+/* --clr-primary: rgb(180, 178, 178); */
 }
 
 * {
@@ -11,7 +13,7 @@
 }
 
 body {
-    font-family: "Gruppo", sans-serif;
+    font-family: "Architects Daughter", serif;    
     font-weight: 400;
     font-style: normal;
     font-size: 1.5rem;
@@ -20,11 +22,14 @@ body {
     
 }
 
-/* h2 {
-    font-family: "Architects Daughter", serif;
-    font-weight: 400;
+h2 {
+    /* font-family: "Gruppo", sans-serif; */
+    font-family: "Merriweather", serif;
+    font-weight: 600;
+    letter-spacing: .4rem;
+    font-size: 3rem;
     font-style: normal;
-} */
+}
 
 .section {
     display: flex;
@@ -34,13 +39,76 @@ body {
 }
 
 .card {
-    background-color: var(--clr-primary-dark);
+    background-color: var(--clr-primary);
     width: 400px;
     height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
-    padding: 4rem 2rem;
-    border: 5px solid var(--clr-primary);
+    gap: 1rem;
+    padding: .5rem;
+    border: 3px solid var(--clr-primary-dark);
+    /* border-radius: .5rem; */
+}
+
+.form {
+    width: 100%;
+}
+
+.list_form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: 
+    "input btn";
+    gap: .3rem
+    
+}
+
+.list_input {
+    font-size: 1rem;
+    color: var(--clr-primary-dark);
+    padding: .3rem .5rem;
+    background-color: var(--clr-background);
+    border: 2px solid white;
+    /* border: 2px solid var(--clr-primary-dark); */
+    border-radius: .5rem;
+    grid-area: input;
+}
+
+/* .list_input:active {
+    border-style: none;
+} */
+
+.list_btn {
+    font-size: 1rem;
+    font-family: "Merriweather", serif;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--clr-primary);
+    /* color: var(--clr-background); */
+    padding: .3rem;
+    border: 2px solid white;
+    /* border: 2px solid transparent; */
+    /* background-color: var(--clr-primary-dark); */
+    background-color: var(--clr-background);
+    border-radius: .5rem;
+    padding: .3rem 1.5rem;
+    cursor: pointer;
+    grid-area: btn;
+
+    transition: .15s;
+
+}
+
+.list_btn:hover {
+    color: var(--clr-primary-dark);
+    border: 2px solid var(--clr-primary-dark);
+    background-color: var(--clr-background);
+}
+
+.list_btn:active {
+    color: var(--clr-primary);
+    border: 2px solid var(--clr-primary-dark);
+    background-color: white;
 }
