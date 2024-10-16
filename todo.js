@@ -1,4 +1,5 @@
 const listForm = document.querySelector('#list_form');
+const ulList = document.querySelector('#todo_list')
 
 // List array
 const todoList = [];
@@ -21,8 +22,17 @@ listForm.addEventListener('submit', e => {
     // Add to array 
     todoList.push(todoInput.value);
 
+
+    // var ul = document.getElementById("#todo_list");
+    // for(let i = 0; i < todoList.length; i++){
+    //         var li = document.createElement('li');
+    //         li.appendChild(document.createTextNode(`hej`));
+    //         ulList[i].value(appendChild(li));
+
+    // }
     
     console.log(todoList);
+    console.log(ulList)
     todoInput.value = '';
     
 })

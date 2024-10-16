@@ -33,6 +33,8 @@ h2 {
 
 ul li {
     font-family: "Architects Daughter", serif;      
+    color: white;
+    border: 2px solid black;
 }
 
 .section {
@@ -125,6 +127,7 @@ ul li {
     margin-left: .5rem;
     display: none;
 }
+
 
 .error {
     .invalid_input {
