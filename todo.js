@@ -1,5 +1,5 @@
 const listForm = document.querySelector('#list_form');
-const ulList = document.querySelector('#todo_list')
+const ulList = document.querySelector('#todo_list');
 
 // List array
 const todoList = [];
@@ -9,32 +9,43 @@ listForm.addEventListener('submit', e => {
     e.preventDefault();
     
     const todoInput = document.querySelector(`#list_input`);
-
+    
     for(let i = 0; i < listForm.length; i++) {
         listForm[i].parentElement.classList.remove('error')
     } 
-
+    
     // Validate form
     if(!validationForm(listForm)) {
         return
     }
-
+    
     // Add to array 
     todoList.push(todoInput.value);
+       
+    // Add to list
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode('hej'));
+    ulList.appendChild(li);
 
-
-    // var ul = document.getElementById("#todo_list");
-    // for(let i = 0; i < todoList.length; i++){
-    //         var li = document.createElement('li');
-    //         li.appendChild(document.createTextNode(`hej`));
-    //         ulList[i].value(appendChild(li));
-
+    // const checkUncheck = (e) => {
+    //     li.classList.toggle('li_checked')
     // }
+    // document.querySelector(li).addEventListener('click', e => {
+    //     e.currentTarget.classList.add('checked')
+    // })
+
     
     console.log(todoList);
     console.log(ulList)
     todoInput.value = '';
     
+})
+
+// Check / uncheck list
+ulList.addEventListener('click', function(event) {
+    if (event.target.tagName === 'LI') {
+        event.target.classList.toggle('checked');
+    }
 })
 
 

@@ -1,8 +1,9 @@
 :root {
 --clr-background: rgb(230, 227, 227);
---clr-primary-dark: rgb(97, 128, 119);
+--clr-primary-dark: rgb(78, 104, 97);
 /* --clr-primary-dark: rgb(124, 123, 123); */
---clr-primary: rgb(116, 146, 138);
+--clr-primary: rgb(154, 190, 181);
+/* --clr-primary: rgb(116, 146, 138); */
 /* --clr-primary: rgb(180, 178, 178); */
 }
 
@@ -29,12 +30,6 @@ h2 {
     letter-spacing: .4rem;
     font-size: 3rem;
     font-style: normal;
-}
-
-ul li {
-    font-family: "Architects Daughter", serif;      
-    color: white;
-    border: 2px solid black;
 }
 
 .section {
@@ -67,7 +62,36 @@ ul li {
     grid-template-areas: 
     "input btn";
     gap: .3rem
+
+
     
+    
+}
+
+ul {
+    font-family: "font awesome 5 free", "Architects Daughter", serif;      
+    color: white;
+    color: var(--clr-primary-dark);
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    list-style-type: "\f0c8  ";
+    list-style-position: inside;
+    margin-top: 1.3rem;
+    gap: .5rem;
+}
+
+li {
+    border-radius: .5rem;
+    background-color: var(--clr-background);
+    padding-left: .5rem;
+    cursor: pointer;
+}
+
+.checked {
+    color: var(--clr-primary);
+    /* text-decoration: ; */
+    list-style-type: "\f14a  ";
 }
 
 .list_input {
@@ -118,6 +142,7 @@ ul li {
     border: 2px solid var(--clr-primary-dark);
     background-color: var(--clr-primary-dark);
 }
+
 
 .invalid_input {
     font-size: .7rem;
