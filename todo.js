@@ -24,7 +24,7 @@ listForm.addEventListener('submit', e => {
        
     // Add to list
     const li = document.createElement('li');
-    li.appendChild(document.createTextNode('hej'));
+    li.appendChild(document.createTextNode(todoInput.value));
     ulList.appendChild(li);
 
     // const checkUncheck = (e) => {
